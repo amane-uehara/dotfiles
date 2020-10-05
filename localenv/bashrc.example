@@ -1,0 +1,31 @@
+if [ $SHLVL = 1 ]; then
+  # US keyboard #{{{
+  if which screen |egrep -v 'not' &> /dev/null ;then
+    setxkbmap us -model us101
+  fi
+  #}}}
+  # read ~/.Xmodmap#{{{
+  if [ -f ~/.Xmodmap ] ;then
+    if xmodmap -pm |egrep '^lock *$' &> /dev/null ;then
+    :
+    else
+      xmodmap ~/.Xmodmap
+    fi
+  fi
+  #}}}
+fi
+
+if [ $SHLVL = 1 ]; then
+  # set PATH #{{{
+  PATH=$HOME/bin:$PATH
+  export PATH
+  #}}}
+fi
+
+if [ $SHLVL = 3 ]; then
+  # run zsh #{{{
+  if which zsh |egrep -v 'not' &> /dev/null ;then
+    zsh
+  fi
+  #}}}
+fi

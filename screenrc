@@ -1,0 +1,28 @@
+defbce              on
+term                xterm-256color
+termcapinfo xterm* 'Co#256:pa#32767:AB=\E[48;5;%dm:AF=\E[38;5;%dm:'
+
+autodetach on
+bell_msg "^G"
+defkanji utf-8
+defencoding utf-8
+encoding utf-8 utf-8
+defscrollback 10000
+startup_message off
+vbell off
+
+# Show date time at bottom right.
+# Types of font    d:dark  b:bold u:underline r:reverse s:strong b:blink
+# Background color k:black r:red  g:green     y:yellow  b:blue   m:magenta c:cyan w:white d:default
+caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b kr} %Y/%m/%d(%D)%C:%s"
+
+bind j  screen
+bind ^j screen
+bind k  kill
+bind ^k kill
+bind n  next
+bind ^n next
+bind p  prev
+bind ^p prev
+
+source $HOME/.localenv/screenrc

@@ -1,0 +1,31 @@
+augroup BinaryXXD
+  autocmd!
+  autocmd BufReadPre  *.bin let &binary =1
+  autocmd BufReadPost * if &binary | silent %!xxd -g 1
+  autocmd BufReadPost * set ft=xxd | endif
+  " autocmd BufWritePre * if &binary | %!xxd -r | endif
+  autocmd BufWritePre * if &binary | execute "%!xxd -r" | endif
+  autocmd BufWritePost * if &binary | silent %!xxd -g 1
+  autocmd BufWritePost * set nomod | endif
+augroup END
+
+augroup fileTypeIndent
+  autocmd!
+  autocmd FileType c  setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd FileType py setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
+
+augroup fileTypeKeymap
+  autocmd FileType c inoremap <buffer> <C-j> <ESC>f@cf@
+  autocmd FileType c inoremap <buffer> `f for (int @CURSOR@=0; @CURSOR@<@CURSOR@; @CURSOR@++) {}0kf@cf@
+  autocmd FileType c inoremap <buffer> `i if (@CURSOR@) {}0kf@cf@
+  autocmd FileType c inoremap <buffer> `e else if (@CURSOR@) {}0kf@cf@
+  autocmd FileType c inoremap <buffer> `w while (@CURSOR@) {}0kf@cf@
+  autocmd FileType c inoremap <buffer> `p printf("@CURSOR@\n", @CURSOR@);0f@cf@
+
+  " " mkdir -p ~/.localenv/vim/pack/mypack/start/gtags/plugin
+  " " cp /usr/share/gtags/gtags.vim ~/.localenv/vim/pack/mypack/start/gtags/plugin/
+  " " edit ~/.localenv/plugin_loader.vim
+  " autocmd FileType c nnoremap <buffer><silent> [MyLeader]o :<C-u>split<CR><C-w>T:<C-u>!gtags<CR>:<C-u>GtagsCursor<CR>:<C-u>cclose<CR>zOzt
+  " autocmd FileType c nnoremap <buffer><silent> [MyLeader]i :<C-u>!gtags<CR>:<C-u>GtagsCursor<CR>:<C-u>cclose<CR>zOzt
+augroup END

@@ -1,0 +1,16 @@
+" Load Color scheme and plugins
+" After vim 8.0, plugins are loaded by pack function.
+" Before vim 7, write runtime path by youself
+if (v:version < 800)
+  set runtimepath+=$HOME/.vim/pack/mypack/start/mycolorscheme
+  " set runtimepath+=$HOME/.localenv/vim/pack/mypack/start/gtags
+  " set runtimepath+=$HOME/.local/vim/pack/mypack/start/ambsearch
+endif
+
+" " Configure ambsearch plugin
+" source $HOME/.vim/pack/mypack/start/ambsearch/ambsearch.vim
+" let g:ambsearch_default_disable=1
+" call AmbsearchLoad('default')
+" call AmbsearchLoad('katakana')
+
+colorscheme mycolorscheme

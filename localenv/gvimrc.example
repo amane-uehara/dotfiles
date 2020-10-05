@@ -1,0 +1,23 @@
+if has("win32")
+  au GUIEnter * simalt ~x " Maximize Window size
+endif
+
+" Font"{{{
+if has("win64")
+  set guifont=MS_Gothic:h15
+  set linespace=0
+elseif has("win32unix")
+  set guifont=MS_Gothic:h15
+  set linespace=0
+elseif has("win32")
+  set guifont=MS_Gothic:h15
+  set linespace=0
+elseif has("macunix") || has('mac') || has('gui_mac')
+  set guifontwide=Osaka:h15
+  set guifont=Osaka-Mono:h15
+elseif has("unix")
+  " Fix the invisible under_score problem on Ubuntu Monospace font.
+  set guifont=DejaVu\ Sans\ Mono\ 15
+  set linespace=-4
+endif
+"}}}

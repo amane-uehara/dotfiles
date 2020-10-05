@@ -1,0 +1,12 @@
+set from             = "hoge@gmail.com"
+set smtp_url         = "smtp://hoge@smtp.gmail.com:587/"
+set imap_user        = "hoge@gmail.com"
+set folder           = "imaps://imap.gmail.com:993"
+source "openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in ~/.localenv/mutt.rsa |"
+
+# HOW TO MAKE mutt.rsa
+# $ cat plain.tex
+# set imap_pass="PASSWORD"
+# set smtp_pass="PASSWORD"
+# $ openssl rsautl -encrypt -inkey ~/.ssh/id_rsa -in plain.txt > mutt.rsa
+# $ rm plain.txt

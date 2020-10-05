@@ -1,0 +1,9 @@
+# This file will be read at normal / ssh login.
+# This file will NOT be read at scp connection (that's not login).
+# When screen runs bash, this file will NOT be read (that's not login).
+
+if [ $SHLVL = 1 ] ;then
+  if which tmux |egrep -v 'not' &> /dev/null ;then
+    tmux
+  fi
+fi

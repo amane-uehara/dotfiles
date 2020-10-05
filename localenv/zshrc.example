@@ -1,0 +1,60 @@
+export TERM="xterm-256color"
+# Alias# {{{
+export LANG=ja_JP.UTF-8
+export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+export LESS='-R'
+alias "ls"="ls -v -F --color=auto" # for OSX, ls -v -F -G
+alias "ll"="ls -lhF --color=auto"
+alias "la"="ls -ah --color=auto"
+alias "lla"="ls -lahF --color=auto"
+#
+if [ -f $HOME/dotfiles/localenv/zsh-simple-snippet/snippet.zsh ]; then
+  source $HOME/dotfiles/localenv/zsh-simple-snippet/snippet.zsh
+  source $HOME/dotfiles/localenv/zsh-simple-snippet/example.zsh
+  bindkey            " "   snippet-expand
+  bindkey -M isearch " "   self-insert
+  bindkey            "^j"  snippet-next-cursor # ^j corresponds to CTRL-j
+  bindkey            "^m"  snippet-exec-after-next-cursor
+  bindkey            "^x " snippet-not-expand
+fi
+# }}}
+# Completion # {{{
+autoload -U compinit
+compinit ~/.zsh_temporary_dir/zsh_compinit_dump
+# }}}
+# Show PWD in left prompt # {{{
+# $ for num in {000..200} ;do echo -n "	[${num}m${num}	[000m " ;done
+DEVICE_NAME="   [local]"
+COLOR_BGN="%{[044m%}"
+COLOR_END="%{[m%}"
+COLOR_DEFAULT="%{[000m%}"
+# }}}
+# Syntax highlight# {{{
+if [ -f $HOME/dotfiles/localenv/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source $HOME/dotfiles/localenv/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  ZSH_HIGHLIGHT_STYLES[default]='none'
+  ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=196'
+  ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=213'
+  ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=48'
+  ZSH_HIGHLIGHT_STYLES[precommand]='fg=48'
+  ZSH_HIGHLIGHT_STYLES[commandseparator]='none'
+  ZSH_HIGHLIGHT_STYLES[path]='fg=228'
+  ZSH_HIGHLIGHT_STYLES[path_pathseparator]='none'
+  ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]='none'
+  ZSH_HIGHLIGHT_STYLES[globbing]='fg=45'
+  ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=45'
+  ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=150'
+  ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=150'
+  ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=45'
+  ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=216'
+  ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=216'
+  ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=216'
+  ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]='fg=45'
+  ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=45'
+  ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]='fg=45'
+  ZSH_HIGHLIGHT_STYLES[assign]='none'
+  ZSH_HIGHLIGHT_STYLES[redirection]='none'
+  ZSH_HIGHLIGHT_STYLES[comment]='fg=252'
+  ZSH_HIGHLIGHT_STYLES[arg0]='fg=48'
+fi
+# }}}
