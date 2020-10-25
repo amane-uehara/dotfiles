@@ -41,10 +41,10 @@ done
 echo "copying example files in ${LOCALENV_PATH}" 1>&2
 
 for FILENAME in \
-  vimrc
-  zshrc
-  plugin_loader.vim
-  tmux.conf
+  vimrc \
+  zshrc \
+  plugin_loader.vim \
+  tmux.conf \
   screenrc \
 ; do
   if [ -e ${LOCALENV_PATH}/${FILENAME} ]; then
