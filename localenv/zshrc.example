@@ -25,7 +25,7 @@ compinit ~/.zsh_temporary_dir/zsh_compinit_dump
 # }}}
 # Show PWD in left prompt # {{{
 # $ for num in {000..200} ;do echo -n "	[${num}m${num}	[000m " ;done
-DEVICE_NAME="   [local]"
+DEVICE_NAME="   [$HOSTNAME]"
 COLOR_BGN="%{[044m%}"
 COLOR_END="%{[m%}"
 COLOR_DEFAULT="%{[000m%}"
