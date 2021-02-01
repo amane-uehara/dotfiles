@@ -3,7 +3,7 @@
 " Before vim 7, write runtime path by youself
 if (v:version < 800)
   set runtimepath+=$HOME/.vim/pack/mypack/start/mycolorscheme
-  " set runtimepath+=$HOME/.localenv/vim/pack/mypack/start/gtags
+  set runtimepath+=$HOME/.localenv/vim/pack/mypack/start/gtags
   " set runtimepath+=$HOME/.local/vim/pack/mypack/start/ambsearch
 endif
 
