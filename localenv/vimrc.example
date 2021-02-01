@@ -29,3 +29,11 @@ augroup fileTypeKeymap
   " autocmd FileType c nnoremap <buffer><silent> [MyLeader]o :<C-u>split<CR><C-w>T:<C-u>!gtags<CR>:<C-u>GtagsCursor<CR>:<C-u>cclose<CR>zOzt
   " autocmd FileType c nnoremap <buffer><silent> [MyLeader]i :<C-u>!gtags<CR>:<C-u>GtagsCursor<CR>:<C-u>cclose<CR>zOzt
 augroup END
+
+function! GtagsCursor_()
+  execute "GtagsCursor"
+  if (len(getqflist()) <= 1)
+  cclose
+  endif
+endfunction
+nnoremap <C-k> :<C-u>call GtagsCursor_()<CR>
