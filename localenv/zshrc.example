@@ -7,8 +7,6 @@ alias "ls"="ls -v -F --color=auto" # for OSX, ls -v -F -G
 alias "ll"="ls -lhF --color=auto"
 alias "la"="ls -ah --color=auto"
 alias "lla"="ls -lahF --color=auto"
-snippets_always+=(gp "egrep -dskip --binary-files=without-match '<C0>' <CS>")
-snippets_always+=(gv "egrep -dskip --binary-files=without-match '<C0>' <CS>")
 #
 export DOCKER_SHARE_DIR=""
 if [ -f $HOME/dotfiles/localenv/zsh-simple-snippet/snippet.zsh ]; then
@@ -19,6 +17,8 @@ if [ -f $HOME/dotfiles/localenv/zsh-simple-snippet/snippet.zsh ]; then
   bindkey            "^j"  snippet-next-cursor # ^j corresponds to CTRL-j
   bindkey            "^m"  snippet-exec-after-next-cursor
   bindkey            "^x " snippet-not-expand
+  snippets_always+=(gp "egrep -dskip --binary-files=without-match '<C0>' <CS>")
+  snippets_always+=(gv "egrep -dskip --binary-files=without-match '<C0>' <CS>")
 fi
 # }}}
 # Completion # {{{
