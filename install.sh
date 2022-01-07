@@ -53,3 +53,8 @@ for FILENAME in \
     cp ${LOCALENV_PATH}/${FILENAME}.example ${LOCALENV_PATH}/${FILENAME}
   fi
 done
+
+
+cd ${LOCALENV_PATH}
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+git clone git@github.com:amane-uehara/zsh-simple-snippet.git
