@@ -14,7 +14,7 @@ z	す
 kc	せ
 q	そ
 g	た
-ko	ち
+df	ち
 y	つ
 r	て
 f	と
@@ -40,7 +40,7 @@ kg	よ
 kd	ら
 p	り
 m	る
-kl	れ
+kj	れ
 dm	ろ
 dl	わ
 ks	を
