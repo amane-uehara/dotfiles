@@ -46,10 +46,8 @@ Conversion	Enter	Commit
 Conversion	Ctrl j	Commit
 Conversion	ESC	Cancel
 Conversion	F10	ConvertToHalfAlphanumeric
-Conversion	z	ConvertToHalfAlphanumeric
 Conversion	F6	ConvertToHiragana
 Conversion	F7	ConvertToFullKatakana
-Conversion	q	ConvertToFullKatakana
 Conversion	F8	ConvertToHalfWidth
 Conversion	F9	ConvertToFullAlphanumeric
 Conversion	Ctrl k	CancelAndIMEOff
