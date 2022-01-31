@@ -73,6 +73,14 @@ Conversion	OFF	CancelAndIMEOff
 Conversion	ON	IMEOn
 Conversion	Ctrl Space	IMEOff
 
+Conversion	h	SegmentFocusLeft
+Conversion	l	SegmentFocusRight
+Conversion	k	SegmentWidthShrink
+Conversion	j	SegmentWidthExpand
+Conversion	d	Commit
+Conversion	q	ConvertToFullKatakana
+Conversion	z	ConvertToFullAlphanumeric
+
 DirectInput	Ctrl l	IMEOn
 DirectInput	Ctrl l	InputModeHiragana
 DirectInput	Henkan	IMEOn
