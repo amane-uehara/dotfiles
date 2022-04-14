@@ -1,7 +1,7 @@
 [
     {
-        "key": "ctrl+k v",
-        "command": "-markdown.showPreviewToSide",
-        "when": "editorLangId == 'markdown'"
+      "key": "ctrl+shift+k",
+      "command": "markdown.showPreviewToSide",
+      "when": "!notebookEditorFocused && editorLangId == 'markdown'"
     }
 ]
