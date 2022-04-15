@@ -3,5 +3,9 @@
       "key": "ctrl+shift+k",
       "command": "markdown.showPreviewToSide",
       "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.toggleSidebarVisibility"
     }
 ]
