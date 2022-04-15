@@ -1,7 +1,6 @@
 {
     "git.autofetch": true,
     "terminal.integrated.sendKeybindingsToShell": true,
-    "window.zoomLevel": 1,
     "editor.lineNumbers": "relative",
 
     // vim keymap
@@ -17,5 +16,6 @@
             "before": ["s", "j"],
             "after": ["<Esc>"]
         }
-    ]
+    ],
+    "window.zoomLevel": 1
 }
