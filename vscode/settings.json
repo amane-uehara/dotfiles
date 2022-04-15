@@ -2,6 +2,7 @@
     "git.autofetch": true,
     "terminal.integrated.sendKeybindingsToShell": true,
     "editor.lineNumbers": "relative",
+    "editor.wordWrap": "on",
 
     // vim keymap
     "vim.useSystemClipboard": true,
@@ -10,12 +11,37 @@
     "vim.visualstar": true,
     "vim.ignorecase": true,
     "vim.incsearch": true,
+    "vim.nrformats": "", // not work
     // "vim.camelCaseMotion.enable": true,
+    // insert mode keymap
     "vim.insertModeKeyBindings": [
         {
             "before": ["s", "j"],
             "after": ["<Esc>"]
         }
     ],
-    "window.zoomLevel": 1
+    // normal mode keymap
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [":"],
+            "after": ["q", ":"]
+        },
+        {
+            "before": ["<C-a>"],
+            "after": ["w", "B", "i", "1", "<Esc>", "<C-a>", "w", "B", "x"]
+        },
+        {
+            "before": ["<C-x>"],
+            "after": ["w", "B", "i", "1", "<Esc>", "<C-x>", "w", "B", "x"]
+        }
+    ],
+    "window.zoomLevel": 1,
+    "git.ignoreMissingGitWarning": true,
+    "explorer.confirmDelete": false,
+    "workbench.editorAssociations": {
+        "*.png": "luna.editor"
+    },
+    "git.confirmSync": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "editor.tabSize": 2
 }
