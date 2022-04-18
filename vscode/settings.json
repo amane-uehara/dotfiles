@@ -39,9 +39,12 @@
     "git.ignoreMissingGitWarning": true,
     "explorer.confirmDelete": false,
     "workbench.editorAssociations": {
-        "*.png": "luna.editor"
+        "*.png": "luna.editor",
+        "*.jpg": "luna.editor",
+        "*.jpeg": "luna.editor"
     },
     "git.confirmSync": false,
     "workbench.editor.untitled.hint": "hidden",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "workbench.startupEditor": "none"
 }
