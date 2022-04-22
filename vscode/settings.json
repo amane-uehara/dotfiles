@@ -22,10 +22,10 @@
     ],
     // normal mode keymap
     "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [":"],
-            "after": ["q", ":"]
-        },
+        //{
+        //    "before": [":"],
+        //    "after": ["q", ":"]
+        //},
         {
             "before": ["<C-a>"],
             "after": ["w", "B", "i", "1", "<Esc>", "<C-a>", "w", "B", "x"]
@@ -46,5 +46,6 @@
     "git.confirmSync": false,
     "workbench.editor.untitled.hint": "hidden",
     "editor.tabSize": 2,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "vscode-edge-devtools.mirrorEdits": true
 }
