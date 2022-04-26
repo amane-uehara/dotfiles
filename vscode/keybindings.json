@@ -5,16 +5,6 @@
       "when": "!notebookEditorFocused && editorLangId == 'markdown'"
     },
     {
-        "key": "ctrl+shift+t",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+shift+t",
-        "command": "workbench.action.terminal.focus",
-        "when": "!terminalFocus"
-    },
-    {
         "key": "ctrl+shift+e",
         "command": "workbench.view.explorer",
         "when": "viewContainer.workbench.view.explorer.enabled"
@@ -25,12 +15,12 @@
         "when": "workbench.scm.active"
     },
     {
-        "key": "ctrl+shift+l",
+        "key": "ctrl+shift+j",
         "command": "workbench.action.terminal.focusNext",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+shift+h",
+        "key": "ctrl+shift+k",
         "command": "workbench.action.terminal.focusPrevious",
         "when": "terminalFocus"
     },
@@ -38,5 +28,14 @@
       "key": "ctrl+shift+n",
       "command": "workbench.action.terminal.new",
       "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+shift+m",
+      "command": "workbench.action.toggleMaximizedPanel",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+shift+,",
+      "command": "workbench.action.togglePanel"
     }
 ]
