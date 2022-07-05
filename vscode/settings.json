@@ -47,5 +47,6 @@
     "workbench.editor.untitled.hint": "hidden",
     "editor.tabSize": 2,
     "workbench.startupEditor": "none",
-    "vscode-edge-devtools.mirrorEdits": true
+    "vscode-edge-devtools.mirrorEdits": true,
+    "terminal.integrated.scrollback": 1000000
 }
