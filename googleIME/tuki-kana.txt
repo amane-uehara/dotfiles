@@ -67,7 +67,7 @@ lc	ぜ
 lq	ぞ
 lg	だ
 l[	ぢ
-ly	づ
+lu	づ
 lr	で
 lf	ど
 la	ば
@@ -80,6 +80,7 @@ lm	ぼ
 /r	ぷ
 /x	ぺ
 /e	ぽ
+ly	ヴ
 d[	「
 d'	」
 d.	ー
