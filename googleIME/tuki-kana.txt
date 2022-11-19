@@ -54,7 +54,7 @@ kb	ゃ
 kv	ゅ
 t	ょ
 n	っ
-lj	ヴ
+lt	ヴ
 ls	が
 ld	ぎ
 lh	ぐ
@@ -66,8 +66,8 @@ lz	ず
 lc	ぜ
 lq	ぞ
 lg	だ
-l[	ぢ
-lu	づ
+lu	ぢ
+ly	づ
 lr	で
 lf	ど
 la	ば
@@ -80,7 +80,6 @@ lm	ぼ
 /r	ぷ
 /x	ぺ
 /e	ぽ
-ly	ヴ
 d[	「
 d'	」
 d.	ー
