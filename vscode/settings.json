@@ -35,18 +35,44 @@
             "after": ["w", "B", "i", "1", "<Esc>", "<C-x>", "w", "B", "x"]
         }
     ],
-    "window.zoomLevel": 1,
     "git.ignoreMissingGitWarning": true,
     "explorer.confirmDelete": false,
-    "workbench.editorAssociations": {
-        "*.png": "luna.editor",
-        "*.jpg": "luna.editor",
-        "*.jpeg": "luna.editor"
-    },
     "git.confirmSync": false,
-    "workbench.editor.untitled.hint": "hidden",
     "editor.tabSize": 2,
     "workbench.startupEditor": "none",
-    "vscode-edge-devtools.mirrorEdits": true,
-    "terminal.integrated.scrollback": 1000000
+    "terminal.integrated.scrollback": 5000,
+    "terminal.integrated.shellArgs.windows": [
+        "-NoExit",
+        "chcp",
+        "65001"
+    ],
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "window.zoomLevel": 1,
+    "workbench.editor.empty.hint": "hidden",
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "files.insertFinalNewline": true,
+    "notebook.insertFinalNewline": true,
+    "workbench.editor.enablePreview": false,
+    "update.showReleaseNotes": false,
+    "git.openRepositoryInParentFolders": "always",
+    "multiCommand.commands": [],
+    "extensions.ignoreRecommendations": true,
+    "pdf-preview.default.cursor": "hand",
+    "editor.stickyScroll.enabled": true,
+    "workbench.colorCustomizations": {
+        "editorStickyScroll.background": "#332765",
+        "editorStickyScrollHover.background": "#504083"
+    },
+    "editor.minimap.enabled": false,
+
+    "terminal.integrated.defaultProfile.linux": "bash (login)",
+    "terminal.integrated.profiles.linux": {
+      "bash (login)": {
+        "path": "bash",
+        "args": [
+          "-l"
+        ],
+        "icon": "terminal-bash"
+      },
+    },
 }
