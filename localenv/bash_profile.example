@@ -7,3 +7,11 @@ if [ $SHLVL = 1 ] ;then
     tmux
   fi
 fi
+
+# stty -ixon
+# export SCREENDIR=~/.screen
+# if [ $SHLVL = 1 ] ;then
+#   if which screen |egrep -v 'not' &> /dev/null ;then
+#     screen
+#   fi
+# fi
