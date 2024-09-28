@@ -52,7 +52,6 @@
     "security.workspace.trust.untrustedFiles": "newWindow",
     "files.insertFinalNewline": true,
     "notebook.insertFinalNewline": true,
-    "workbench.editor.enablePreview": false,
     "update.showReleaseNotes": false,
     "git.openRepositoryInParentFolders": "always",
     "multiCommand.commands": [],
@@ -75,4 +74,12 @@
         "icon": "terminal-bash"
       },
     },
+    "vim.foldfix": true,
+    "editor.fontFamily": "'PlemolJP Medium'",
+    "terminal.integrated.letterSpacing": 1,
+    "window.confirmSaveUntitledWorkspace": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "workbench.panel.defaultLocation": "right",
+    "workbench.editor.pinnedTabsOnSeparateRow": true,
+    "workbench.editor.enablePreview": false
 }
