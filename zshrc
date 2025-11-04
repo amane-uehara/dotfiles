@@ -61,27 +61,6 @@ setopt brace_ccl                   # {a-c} becomes a b c
 setopt extended_glob               # ~ becomes ```except'''
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # delimiter. / is not included, thus ^w delete the directory or filename
 # }}}
-# show begin/end time in right prompt# {{{
-export PREV_COMMAND_END_TIME
-export NEXT_COMMAND_BGN_TIME
-
-function show_command_end_time() {
-  PREV_COMMAND_END_TIME=`date "+%H:%M:%S"`
-  PROMPT="${COLOR_BGN}${PREV_COMMAND_END_TIME} ${DEVICE_NAME} %/${COLOR_END} "'${vcs_info_msg_0_}
-'"${COLOR_BGN}\$${COLOR_END}${COLOR_DEFAULT} "
-}
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd show_command_end_time
-
-show_command_begin_time() {
-  NEXT_COMMAND_BGN_TIME=`date "+%H:%M:%S"`
-  PROMPT="${COLOR_BGN}${PREV_COMMAND_END_TIME} - ${NEXT_COMMAND_BGN_TIME} %/${COLOR_END} "'${vcs_info_msg_0_}
-'"${COLOR_BGN}\$${COLOR_END}${COLOR_DEFAULT} "
-  zle .accept-line
-  zle .reset-prompt
-}
-zle -N accept-line show_command_begin_time
-# }}}
 # source local file# {{{
 if [ -f $HOME/.localenv/zshrc ] ;then
   source $HOME/.localenv/zshrc
