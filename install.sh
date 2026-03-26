@@ -56,5 +56,5 @@ done
 
 
 cd ${LOCALENV_PATH}
-git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
-git clone git@github.com:amane-uehara/zsh-simple-snippet.git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone https://github.com/amane-uehara/zsh-simple-snippet.git
