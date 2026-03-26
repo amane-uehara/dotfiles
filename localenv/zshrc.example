@@ -34,7 +34,8 @@ DEVICE_NAME="[${MY_PROMPT_DEVICE}]"
 COLOR_BGN="%{[${MY_PROMPT_COLOR}m%}"
 COLOR_END="%{[m%}"
 COLOR_DEFAULT="%{[000m%}"
-PROMPT="${COLOR_BGN}${DEVICE_NAME} %/${COLOR_END}${COLOR_DEFAULT} "
+PROMPT="${COLOR_BGN}${DEVICE_NAME} %/${COLOR_END}${COLOR_DEFAULT}
+${COLOR_BGN}\$${COLOR_END}${COLOR_DEFAULT} "
 # }}}
 # display git state in prompt# {{{
 autoload -Uz vcs_info
