@@ -27,10 +27,14 @@ compinit ~/.zsh_temporary_dir/zsh_compinit_dump
 # }}}
 # Show PWD in left prompt # {{{
 # $ for num in {000..200} ;do echo -n "	[${num}m${num}	[000m " ;done
-DEVICE_NAME="   [$HOSTNAME]"
-COLOR_BGN="%{[044m%}"
+MY_PROMPT_COLOR="044"
+MY_PROMPT_DEVICE="$HOSTNAME"
+
+DEVICE_NAME="   [${MY_PROMPT_DEVICE}]"
+COLOR_BGN="%{[${MY_PROMPT_COLOR}m%}"
 COLOR_END="%{[m%}"
 COLOR_DEFAULT="%{[000m%}"
+PROMPT="${COLOR_BGN}${DEVICE_NAME} %/${COLOR_END}${COLOR_DEFAULT} "
 # }}}
 # display git state in prompt# {{{
 autoload -Uz vcs_info
@@ -42,27 +46,27 @@ zstyle ':vcs_info:*'     formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*'     actionformats '[%b|%a]'
 precmd () { vcs_info }
 # }}}
-# show begin/end time in right prompt# {{{
-export PREV_COMMAND_END_TIME
-export NEXT_COMMAND_BGN_TIME
-
-function show_command_end_time() {
-  PREV_COMMAND_END_TIME=`date "+%H:%M:%S"`
-  PROMPT="${COLOR_BGN}${PREV_COMMAND_END_TIME} ${DEVICE_NAME} %/${COLOR_END} "'${vcs_info_msg_0_}
-'"${COLOR_BGN}\$${COLOR_END}${COLOR_DEFAULT} "
-}
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd show_command_end_time
-
-show_command_begin_time() {
-  NEXT_COMMAND_BGN_TIME=`date "+%H:%M:%S"`
-  PROMPT="${COLOR_BGN}${PREV_COMMAND_END_TIME} - ${NEXT_COMMAND_BGN_TIME} %/${COLOR_END} "'${vcs_info_msg_0_}
-'"${COLOR_BGN}\$${COLOR_END}${COLOR_DEFAULT} "
-  zle .accept-line
-  zle .reset-prompt
-}
-zle -N accept-line show_command_begin_time
-# }}}
+## show begin/end time in right prompt# {{{
+#export PREV_COMMAND_END_TIME
+#export NEXT_COMMAND_BGN_TIME
+#
+#function show_command_end_time() {
+#  PREV_COMMAND_END_TIME=`date "+%H:%M:%S"`
+#  PROMPT="${COLOR_BGN}${PREV_COMMAND_END_TIME} ${DEVICE_NAME} %/${COLOR_END} "'${vcs_info_msg_0_}
+#'"${COLOR_BGN}\$${COLOR_END}${COLOR_DEFAULT} "
+#}
+#autoload -Uz add-zsh-hook
+#add-zsh-hook precmd show_command_end_time
+#
+#show_command_begin_time() {
+#  NEXT_COMMAND_BGN_TIME=`date "+%H:%M:%S"`
+#  PROMPT="${COLOR_BGN}${PREV_COMMAND_END_TIME} - ${NEXT_COMMAND_BGN_TIME} %/${COLOR_END} "'${vcs_info_msg_0_}
+#'"${COLOR_BGN}\$${COLOR_END}${COLOR_DEFAULT} "
+#  zle .accept-line
+#  zle .reset-prompt
+#}
+#zle -N accept-line show_command_begin_time
+## }}}
 # Syntax highlight# {{{
 if [ -f $HOME/dotfiles/localenv/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source $HOME/dotfiles/localenv/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
